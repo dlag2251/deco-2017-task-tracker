@@ -4,65 +4,88 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Task Tracker</title>
+        <title>Caffeine.io - Caffeine Intake Tracker</title>
         <link rel="stylesheet" href="scss/main.scss">
     </head>
     <body>
         <header>
-            <h1>Task Tracker</h1>
+      
+            <img src="images/caffeine.io-logo.png" alt="Caffeine.io Logo" id="logo"/>
+
+            <p id="welcome-message"> Welcome to caffeine.io! Use the tracker below to record your caffeine intake. Please consume caffeine responsibly. </p>
+     
         </header>
+
+        <h1>Caffeine Intake Tracker</h1>
+
         <form id="taskform">
             <div class="form-row">
-                <label for="taskName">Name</label>
+                <label for="taskName">Beverage Name</label>
                 <input
                     type="text"
                     name="taskName"
                     id="taskName"
                     required="true"
+                    placeholder="Please enter"
                 >
             </div>
             <div class="form-row">
-                <label for="taskType">Type</label>
+                <label for="taskType">Beverage Category</label>
                 <select id="taskType" name="taskType" required="true">
-                    <option value="">Select one</option>
-                    <option value="Concept Ideation">Concept Ideation</option>
-                    <option value="Wireframing">Wireframing</option>
-                    <option value="Application Coding">Application Coding</option>
+                    <option value="">Select category</option>
+                    <option value="Coffee">Coffee</option>
+                    <option value="Tea">Tea</option>
+                    <option value="Energy Drink">Energy Drink</option>
+                    <option value="Soft Drink">Soft Drink</option>
                 </select>
             </div>
             <div class="form-row">
-                <label for="taskRate">Rate</label>
+                <label for="taskRate">Caffeine Amount</label>
                 <input
                     type="number"
                     name="taskRate"
                     id="taskRate"
                     required="true"
+                    placeholder="Please enter"
                 >
             </div>
             <div class="form-row">
-                <label for="taskTime">Time</label>
+                <label for="taskTime">Quantity</label>
+                <select id="taskType" name="taskType" required="true">
+                    <option value="">Select quantity</option>
+                    <option value=1>1</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="taskClient">Calories</label>
                 <input
                     type="number"
-                    name="taskTime"
-                    id="taskTime"
-                    required="true"
-                >
-            </div>
-            <div class="form-row">
-                <label for="taskClient">Client</label>
-                <input
-                    type="text"
                     name="taskClient"
                     id="taskClient"
                     required="true"
+                    placeholder="Please enter"
                 >
             </div>
+            <!-- <div class="form-row">
+                <label for="taskClient">Price</label>
+                <input
+                    type="number"
+                    name="taskClient"
+                    id="taskClient"
+                    required="true"
+                    placeholder="Please enter"
+                >
+            </div> -->
             <div class="form-row">
                 <input type="submit">
             </div>
         </form>
-        <h2>Tasks</h2>
+
+        <h2>Caffeine Consumed</h2>
         <ul id="tasklist"></ul>
+        
         <script src="script.js"></script>
     </body>
 </html>
