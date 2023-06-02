@@ -13,6 +13,7 @@ form.addEventListener("submit", function (event) {
         form.elements.taskRate.value,
         form.elements.taskTime.value,
         form.elements.taskClient.value,
+        form.elements.taskPrice.value,
     )
     console.log(taskList)
 })
@@ -83,7 +84,7 @@ var taskList = [];
 // Replace the property values with the input paramaters
 // Add the object to the taskList array
 
-function addTask(name, type, rate, time, client) {
+function addTask(name, type, rate, time, client, price) {
 
     // Creating the object with the usual property:value syntax
     // Create task object 
@@ -105,7 +106,8 @@ function addTask(name, type, rate, time, client) {
         date: new Date().toISOString(),
         rate,
         time,
-        client
+        client, 
+        price
     }
 
     taskList.push(task);
