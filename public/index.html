@@ -23,28 +23,26 @@
             <div class="form-columns">
 
             <div class="label-column">
-                <label class="input-label" for="taskName">Beverage Name</label>
-                <label class="input-label" for="taskType">Category</label>
-                <label class="input-label" for="taskRate">Caffeine (mg)</label>
-                <label class="input-label" for="taskTime">Quantity</label>
-                <label class="input-label" for="taskClient">Calories</label>
-                <label class="input-label" for="taskPrice">Price</label>
+                <label class="input-label" for="bevName">Beverage Name</label>
+                <label class="input-label" for="bevCateg">Category</label>
+                <label class="input-label" for="caffAmt">Caffeine (mg)</label>
+                <label class="input-label" for="bevQuant">Quantity</label>
+                <label class="input-label" for="bevCals">Calories</label>
+                <label class="input-label" for="bevPrice">Price</label>
               </div>
 
           <div class="input-column">
             <div class="form-row">
-                <!-- <label for="taskName">Beverage Name</label> -->
                 <input
                     type="text"
-                    name="taskName"
-                    id="taskName"
+                    name="bevName"
+                    id="bevName"
                     required="true"
                     placeholder="Please enter"
                 >
             </div>
             <div class="form-row">
-                <!-- <label for="taskType">Beverage Category</label> -->
-                <select id="taskType" name="taskType" required="true">
+                <select id="bevCateg" name="bevCateg" required="true">
                     <option value="">Select category</option>
                     <option value="Coffee">Coffee</option>
                     <option value="Tea">Tea</option>
@@ -53,18 +51,16 @@
                 </select>
             </div>
             <div class="form-row">
-                <!-- <label for="taskRate">Caffeine (mg)</label> -->
                 <input
                     type="number"
-                    name="taskRate"
-                    id="taskRate"
+                    name="caffAmt"
+                    id="caffAmt"
                     required="true"
                     placeholder="Please enter"
                 >
             </div>
             <div class="form-row">
-                <!-- <label for="taskTime">Quantity</label> -->
-                <select id="taskTime" name="taskTime" required="true">
+                <select id="bevQuant" name="bevQuant" required="true">
                     <option value="">Select quantity</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -72,21 +68,19 @@
                 </select>
             </div>
             <div class="form-row">
-                <!-- <label for="taskClient">Calories</label> -->
                 <input
                     type="number"
-                    name="taskClient"
-                    id="taskClient"
+                    name="bevCals"
+                    id="bevCals"
                     required="true"
                     placeholder="Please enter"
                 >
             </div>
             <div class="form-row">
-                <!-- <label for="taskPrice">Price</label> -->
                 <input
                     type="number"
-                    name="taskPrice"
-                    id="taskPrice"
+                    name="bevPrice"
+                    id="bevPrice"
                     required="true"
                     placeholder="Please enter"
                 >
@@ -100,7 +94,7 @@
         </form>
 
         <h3>Caffeine Consumed</h3>
-        <ul id="tasklist"></ul>
+        <ul id="bevlist"></ul>
 
         <script type="module" src="script.js"></script>
     </body>

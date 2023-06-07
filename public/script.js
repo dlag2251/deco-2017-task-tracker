@@ -1,37 +1,37 @@
 // Setting up variables for our HTML elements using DOM selection
 const form = document.getElementById("taskform");
-const tasklist = document.getElementById("tasklist");
+const bevlist = document.getElementById("bevlist");
 
 form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    console.log(form.elements.taskType.value)
+    console.log(form.elements.bevCateg.value)
 
-    addTask(
-        form.elements.taskName.value,
-        form.elements.taskType.value,
-        form.elements.taskRate.value,
-        form.elements.taskTime.value,
-        form.elements.taskClient.value,
-        form.elements.taskPrice.value,
+    addBev(
+        form.elements.bevName.value,
+        form.elements.bevCateg.value,
+        form.elements.caffAmt.value,
+        form.elements.bevQuant.value,
+        form.elements.bevCals.value,
+        form.elements.bevPrice.value,
     )
-    console.log(taskList)
+    console.log(bevList)
 })
 
 
-function displayTask(task) {
+function displayBev(bev) {
     let item = document.createElement("li");
-    item.setAttribute("data-id", task.id);
+    item.setAttribute("data-id", bev.id);
     item.innerHTML = 
-    `<p><strong>${task.name}</strong><br><br>
-    Caffeine: ${task.rate} mg<br>
-    Type: ${task.type}<br>
-    Time: ${task.date} <br> 
-    Quantity: ${task.time} <br> 
-    Calories: ${task.client} <br> 
-    Price: ${task.price}</p>`;
+    `<p><strong>${bev.name}</strong><br><br>
+    Caffeine: ${bev.caffamt} mg<br>
+    Type: ${bev.categ}<br>
+    Time: ${bev.date} <br> 
+    Quantity: ${bev.quant} <br> 
+    Calories: ${bev.cals} <br> 
+    Price: ${bev.price}</p>`;
 
-    tasklist.appendChild(item);
+    bevlist.appendChild(item);
 
 
     // Clear the value of the input once the task has been added to the page
@@ -46,14 +46,14 @@ function displayTask(task) {
     // Listen for when the delete button is clicked
     delButton.addEventListener("click", function (event) {
 
-        taskList.forEach(function (taskArrayElement, taskArrayIndex) {
+        bevList.forEach(function (taskArrayElement, taskArrayIndex) {
             if (taskArrayElement.id == item.getAttribute('data-id')) {
-                taskList.splice(taskArrayIndex, 1)
+                bevList.splice(taskArrayIndex, 1)
             }
         })
 
         // Make sure the deletion worked by logging out the whole array
-        console.log(taskList)
+        console.log(bevList)
 
         item.remove(); // Remove the task item from the page when button clicked
         // Because we used 'let' to define the item, this will always delete the right element
@@ -63,33 +63,33 @@ function displayTask(task) {
 
 
 
-// Creating an array called 'taskList'
-var taskList = [];
+// Creating an array called 'bevList'
+var bevList = [];
 
 
-function addTask(name, type, rate, time, client, price) {
+function addBev(name, categ, caffamt, quant, cals, price) {
 
-    let task = {
+    let bev = {
         name,
-        type,
+        categ,
         id: Date.now(),
         date: new Date().toISOString(),
-        rate,
-        time,
-        client, 
+        caffamt,
+        quant,
+        cals, 
         price
     }
 
-    taskList.push(task);
-    displayTask(task);
+    bevList.push(bev);
+    displayBev(bev);
 
 }
 
 // Test values for function
-addTask("Latte", "Coffee", 100, 2, 110, 4);
+addBev("Latte", "Coffee", 100, 2, 110, 4);
 
 // Logging array to the console.
-console.log(taskList)
+console.log(bevList)
 
 
 
