@@ -24,12 +24,12 @@ function displayBev(bev) {
     item.setAttribute("data-id", bev.id);
     item.innerHTML = 
     `<p><strong>${bev.name}</strong><br><br>
-    Caffeine: ${bev.caffamt} mg<br>
-    Type: ${bev.categ}<br>
-    Time: ${bev.date} <br> 
-    Quantity: ${bev.quant} <br> 
-    Calories: ${bev.cals} <br> 
-    Price: ${bev.price}</p>`;
+    <em>Caffeine:</em> ${bev.caffamt} mg<br>
+    <em>Type:</em> ${bev.categ}<br>
+    <em>Time:</em> ${bev.date} <br> 
+    <em>Quantity:</em> ${bev.quant} <br> 
+    <em>Calories:</em> ${bev.cals} <br> 
+    <em>Price:</em> ${bev.price}</p>`;
 
     bevlist.appendChild(item);
 
@@ -60,7 +60,6 @@ function displayBev(bev) {
 
     })
 };
-
 
 
 // Creating an array called 'bevList'
