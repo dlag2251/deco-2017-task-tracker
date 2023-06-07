@@ -13,6 +13,7 @@
     "parcel": "^2.9.1"
   },
   "dependencies": {
+    "@parcel/resolver-glob": "^2.9.1",
     "express": "^4.18.2",
     "sass": "^1.62.0"
   }
