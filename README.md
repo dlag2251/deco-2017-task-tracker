@@ -34,6 +34,8 @@ Most of my efforts during this iteration were to implement the image feature as 
 
 **Iteration 3:**
 
+This iteration can be linked to commit #dcced5b, titled "updated styling elements."
+
 In this iteration, after attempting to implement the image functionality, I went back to paying attention to other style elements that needed work. To make my form more aesthetically pleasing I aligned my input boxes and input labels in a uniform manner. I did so by creating separate divs for my input labels and input boxes, then flex displaying them as columns. 
 
 I also centered my form and tracked beverage sections, as they were awkwardly aligned in iteration 2 (with the tracked beverages being flush to the left side of the page instead).
